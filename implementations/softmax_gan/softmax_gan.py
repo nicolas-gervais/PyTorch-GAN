@@ -27,7 +27,7 @@ parser.add_argument("--latent_dim", type=int, default=100, help="dimensionality 
 parser.add_argument("--img_size", type=int, default=28, help="size of each image dimension")
 parser.add_argument("--channels", type=int, default=1, help="number of image channels")
 parser.add_argument("--sample_interval", type=int, default=400, help="interval betwen image samples")
-opt = parser.parse_args()
+opt, unknown = parser.parse_known_args()
 print(opt)
 
 img_shape = (opt.channels, opt.img_size, opt.img_size)
